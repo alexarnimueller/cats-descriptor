@@ -12,58 +12,53 @@ AtomType NH0 [#7;H0;+0]
 AtomType FlCl [#9,#17]
 AtomType NH2 [#7;H2]
 AtomType CSPOOH [C,S,P](=O)-[O;H1]
-AtomType AromR4 [a]
-AtomType AromR5 [a]
-AtomType AromR6 [a]
-AtomType AromR7 [a]
-AtomType AromR8 [a]
 
 DefineFeature SingleAtomDonor [{Hydroxylgroup},{NH_NH2_NH3}]
   Family Donor
-  Weights 1
+  Weights 1.0
 EndFeature
 
 DefineFeature SingleAtomAcceptor [{OxygenAtom},{NH0},{FlCl}]
   Family Acceptor
-  Weights 1
+  Weights 1.0
 EndFeature
 
 DefineFeature SingleAtomPositive [{PosCharge},{NH2}]
   Family PosIonizable
-  Weights 1
+  Weights 1.0
 EndFeature
 
 DefineFeature SingleAtomNegative [{NegCharge},{CSPOOH}]
   Family NegIonizable
-  Weights 1
+  Weights 1.0
 EndFeature
 
 DefineFeature SingleAtomLipophilic [!a;{CarbonLipophilic},{ClBrI},{SC2}]
   Family Hydrophobe
-  Weights 1
+  Weights 1.0
 EndFeature
 
-DefineFeature Arom4 [{AromR4}]1[{AromR4}][{AromR4}][{AromR4}]1
+DefineFeature Arom4 [a]1[a][a][a]1
  Family Aromatic
  Weights 1.0,1.0,1.0,1.0
 EndFeature
 
-DefineFeature Arom5 [{AromR5}]1[{AromR5}][{AromR5}][{AromR5}][{AromR5}]1
+DefineFeature Arom5 [a]1[a][a][a][a]1
  Family Aromatic
  Weights 1.0,1.0,1.0,1.0,1.0
 EndFeature
 
-DefineFeature Arom6 [{AromR6}]1[{AromR6}][{AromR6}][{AromR6}][{AromR6}][{AromR6}]1
+DefineFeature Arom6 [a]1[a][a][a][a][a]1
  Family Aromatic
  Weights 1.0,1.0,1.0,1.0,1.0,1.0
 EndFeature
 
-DefineFeature Arom7 [{AromR7}]1[{AromR7}][{AromR7}][{AromR7}][{AromR7}][{AromR7}][{AromR7}]1
+DefineFeature Arom7 [a]1[a][a][a][a][a][a]1
  Family Aromatic
  Weights 1.0,1.0,1.0,1.0,1.0,1.0,1.0
 EndFeature
 
-DefineFeature Arom8 [{AromR8}]1[{AromR8}][{AromR8}][{AromR8}][{AromR8}][{AromR8}][{AromR8}][{AromR8}]1
+DefineFeature Arom8 [a]1[a][a][a][a][a][a][a]1
  Family Aromatic
  Weights 1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
 EndFeature
