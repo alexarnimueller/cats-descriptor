@@ -102,12 +102,10 @@ def cats_descriptor(mols: List[Mol], ids: Union[list, None] = None) -> np.array:
 
 @click.command()
 @click.argument("smiles_file")
-@click.option("-o", "--output_file", dest="output_file", type=str, default="cats.txt", help="output filename")
-@click.option("-i", "--id_column", dest="id_column", type=str, default="ID", help="column header of the ID column")
-@click.option(
-    "-s", "--smiles_column", dest="smiles_column", type=str, default="SMILES", help="column header of the SMILES column"
-)
-@click.option("-v", "--verbose", dest="verbose", is_flag=True, default=False, help="verbosity")
+@click.option("-o", "--output_file", type=str, default="cats.txt", help="output filename")
+@click.option("-i", "--id_column", type=str, default="ID", help="column header of the ID column")
+@click.option("-s", "--smiles_column", type=str, default="SMILES", help="column header of the SMILES column")
+@click.option("-v", "--verbose", is_flag=True, default=False, help="verbosity")
 def run(smiles_file: str, output_file: str, id_column: str, smiles_column: str, verbose: bool):
     if verbose:
         print("Loading molecules...")
